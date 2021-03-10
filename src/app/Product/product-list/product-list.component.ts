@@ -12,6 +12,7 @@ export class ProductListComponent implements OnInit {
 
   constructor() { 
 
+
     this.products.push(
       {
         name: "ส้มโอ",
@@ -30,6 +31,13 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  selectedProduct(product: Product) {
+    // alert('Product is: ${product.name} selected');
+    alert("Product is: " + product.name + " selected");
+    
+
   }
 
 }
