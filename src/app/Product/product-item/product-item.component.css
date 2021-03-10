@@ -25,3 +25,8 @@
     border-radius: 5px;
     box-shadow: rgba(211, 89, 89, 0.2) 0px 12px 28px 0px, rgba(114, 41, 41, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
+
+.selected {
+    background: lightgray;
+    color: rgb(51, 42, 42);
+}

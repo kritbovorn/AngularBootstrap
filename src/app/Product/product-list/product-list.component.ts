@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { Product } from '../product'
+
+import { ProductItemComponent } from './../product-item/product-item.component';
 
 @Component({
   selector: 'app-product-list',
@@ -10,33 +12,26 @@ export class ProductListComponent implements OnInit {
 
   products: Product[] = [];
 
+  @ViewChildren(ProductItemComponent)
+  productItems!: QueryList<ProductItemComponent>;
+
   constructor() { 
 
-
-    this.products.push(
-      {
-        name: "ส้มโอ",
-        price: 990
-      },
-      {
-        name: "แตงโม",
-        price: 900,
-      },
-      {
-        name: "มะพร้าวน้ำหอม",
-        price: 500
-      },
-      
-    );
+    this.products = [];
   }
 
   ngOnInit(): void {
   }
 
-  selectedProduct(product: Product) {
-    // alert('Product is: ${product.name} selected');
-    alert("Product is: " + product.name + " selected");
+  selectedProduct(productComponent: ProductItemComponent) {
     
+    alert(`Product ที่ท่านเลือก คือ: ${productComponent.product.name} มีราคา อยู่ที่ : ${productComponent.product.price} บาท.`);
+
+    this.productItems.forEach(p => {
+      p.isSelected = false
+    });
+    
+    productComponent.isSelected = true;
 
   }
 
