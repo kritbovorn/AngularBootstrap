@@ -1,0 +1,22 @@
+
+
+.main {
+
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+    
+}
+
+.mainPage {
+    background: cornsilk;
+    border-radius: 5px 80px 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    grid-column: 3 / 23;
+    grid-row: 8 / 23;
+
+    padding: 2rem;
+    
+}

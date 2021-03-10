@@ -24,7 +24,8 @@ export class ProductListComponent implements OnInit {
       {
         name: "มะพร้าวน้ำหอม",
         price: 500
-      }
+      },
+      
     );
   }
 
