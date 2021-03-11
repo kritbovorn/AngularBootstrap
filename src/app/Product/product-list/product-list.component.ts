@@ -30,4 +30,8 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selectedProduct(product: Product) {
+    alert(`Product ${product.name} ได้ถูกเลือกแล้ว : ราคา = ${product.price} บาท.`);
+  }
+
 }
